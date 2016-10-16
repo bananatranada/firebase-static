@@ -1,0 +1,25 @@
+{
+  "name": "generator-firebase-static",
+  "version": "0.0.0",
+  "description": "Static website hosted on Firebase Hosting (React+Redux)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "firebase",
+    "\"static",
+    "website\"",
+    "react",
+    "redux"
+  ],
+  "author": "bkgunby",
+  "license": "MIT",
+  "dependencies": {
+    "yeoman-generator": "^0.24.1",
+    "yosay": "^1.2.1"
+  },
+  "devDependencies": {
+    "express": "^4.14.0"
+  }
+}

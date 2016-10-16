@@ -1,0 +1,6 @@
+{
+    "projects": {
+        "staging": "<%= staging %>",
+        "production": "<%= production %>"
+    }
+}
