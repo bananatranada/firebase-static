@@ -7,3 +7,5 @@ typings
 **/project.lock.json
 .vscode
 .vs
+
+public

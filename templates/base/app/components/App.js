@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 
-class Root extends Component {
+class App extends Component {
   constructor(props) {
     super(props)
   }
@@ -8,13 +8,13 @@ class Root extends Component {
   render() {
     return (
       <div>
-        Root
+        {this.props.children}
       </div>
     )
   }
 }
 
-Root.proptypes = {}
-Root.defaultProps = {}
+App.proptypes = {}
+App.defaultProps = {}
 
-export default Root
+export default App

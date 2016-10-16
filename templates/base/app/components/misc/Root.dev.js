@@ -1,4 +1,10 @@
 import React, { Component, PropTypes } from 'react'
+import { Provider } from 'react-redux'
+import { Router, browserHistory } from 'react-router'
+import { syncHistoryWithStore } from 'react-router-redux'
+
+import DevTools from './DevTools'
+import routes from '../../config/routes'
 
 class Root extends Component {
   constructor(props) {
@@ -6,10 +12,15 @@ class Root extends Component {
   }
 
   render() {
+    const history = syncHistoryWithStore(browserHistory, this.props.store)
+
     return (
-      <div>
-        Root
-      </div>
+      <Provider store={this.props.store}>
+        <div>
+          <DevTools />
+          <Router routes={routes()} history={history} />
+        </div>
+      </Provider>
     )
   }
 }
@@ -17,4 +28,4 @@ class Root extends Component {
 Root.proptypes = {}
 Root.defaultProps = {}
 
-export default AppPage
+export default Root

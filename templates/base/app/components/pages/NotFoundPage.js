@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 
-class Root extends Component {
+class NotFoundPage extends Component {
   constructor(props) {
     super(props)
   }
@@ -8,13 +8,13 @@ class Root extends Component {
   render() {
     return (
       <div>
-        Root
+        NotFoundPage
       </div>
     )
   }
 }
 
-Root.proptypes = {}
-Root.defaultProps = {}
+NotFoundPage.proptypes = {}
+NotFoundPage.defaultProps = {}
 
-export default Root
+export default NotFoundPage

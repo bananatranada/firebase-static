@@ -2,6 +2,7 @@ var path = require('path')
 var webpack = require('webpack')
 var autoprefixer = require('autoprefixer')
 var HtmlWebpackPlugin = require('html-webpack-plugin')
+var HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin')
 
 var config = {
   devtool: 'cheap-module-eval-source-map',
@@ -24,16 +25,18 @@ var config = {
     new HtmlWebpackPlugin({
       title: 'My App',
       template: 'app/templates/index.ejs',
-      // filename: 'app/templates/index.ejs'
-    })
+      filename: 'index.html',
+      alwaysWriteToDisk: true,
+    }),
+    new HtmlWebpackHarddiskPlugin(),
   ],
   module: {
     loaders: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         loader: 'babel',
         include: [
-          path.resolve(__dirname, 'src')
+          path.resolve(__dirname, 'app/')
         ]
       },
       { test: /\.css$/,           loader: 'style!css!postcss' },
